@@ -10,7 +10,7 @@
     "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "Oksana Tanashchuk <oksana.tanashuk@gmail.com>",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.6.0",
