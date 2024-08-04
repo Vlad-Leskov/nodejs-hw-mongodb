@@ -3,9 +3,10 @@ import cors from 'cors';
 import pino from 'pino-http';
 import dotenv from 'dotenv';
 import env from './utils/evn.js';
-import router from './routers/contacts.js';
+import routers from './routers/index.js';
 import notFoundHandler from './middlewares/notFoundHandler.js';
 import errorHandler from './middlewares/errorHandler.js';
+import cookieParser from 'cookie-parser';
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ const setupServer = () => {
   app.use(cors());
 
   app.use(express.json());
+
+  app.use(cookieParser());
 
   app.use(
     pino({
@@ -30,10 +33,10 @@ const setupServer = () => {
     console.log(`Time: ${new Date().toLocaleString()}`);
     next();
   });
-  
-  app.use(router);
 
-  app.use('* ', notFoundHandler);
+  app.use(routers);
+
+  app.use('*', notFoundHandler);
 
   app.use(errorHandler);
 
