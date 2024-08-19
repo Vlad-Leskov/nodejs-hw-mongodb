@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "https://validation-5dsv.onrender.com"
+      "url": "https://nodejs-hw-mongodb-cwtc.onrender.com"
     }
   ],
   "tags": [
@@ -27,9 +27,7 @@
   "paths": {
     "/contacts/{id}": {
       "get": {
-        "tags": [
-          "Contacts"
-        ],
+        "tags": ["Contacts"],
         "summary": "Get contact by id",
         "operationId": "getContact",
         "description": "Get contact by id",
@@ -56,11 +54,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -85,9 +79,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Contacts"
-        ],
+        "tags": ["Contacts"],
         "summary": "Delete contact by id",
         "operationId": "deleteContact",
         "description": "Delete contact by id",
@@ -130,9 +122,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Contacts"
-        ],
+        "tags": ["Contacts"],
         "summary": "Upsert contact",
         "operationId": "putContact",
         "description": "Upsert contact",
@@ -182,11 +172,7 @@
                   "contactType": {
                     "description": "Type of contact",
                     "type": "string",
-                    "enum": [
-                      "home",
-                      "work",
-                      "personal"
-                    ]
+                    "enum": ["home", "work", "personal"]
                   },
                   "photo": {
                     "description": "Contact photo",
@@ -205,11 +191,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -234,11 +216,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -263,9 +241,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Contacts"
-        ],
+        "tags": ["Contacts"],
         "summary": "Patch contact",
         "operationId": "patchContact",
         "description": "Patch contact",
@@ -315,11 +291,7 @@
                   "contactType": {
                     "description": "Type of contact",
                     "type": "string",
-                    "enum": [
-                      "home",
-                      "work",
-                      "personal"
-                    ]
+                    "enum": ["home", "work", "personal"]
                   },
                   "photo": {
                     "description": "Contact photo",
@@ -338,11 +310,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -369,9 +337,7 @@
     },
     "/contacts": {
       "get": {
-        "tags": [
-          "Contacts"
-        ],
+        "tags": ["Contacts"],
         "summary": "Get list of contacts",
         "operationId": "getContacts",
         "description": "Get list of users with this endpoint",
@@ -411,10 +377,7 @@
             "name": "sortOrder",
             "schema": {
               "type": "string",
-              "enum": [
-                "asc",
-                "desc"
-              ],
+              "enum": ["asc", "desc"],
               "example": "asc"
             }
           },
@@ -431,11 +394,7 @@
             "name": "contactType",
             "schema": {
               "type": "string",
-              "enum": [
-                "work",
-                "home",
-                "personal"
-              ],
+              "enum": ["work", "home", "personal"],
               "example": "home"
             }
           }
@@ -447,11 +406,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -516,9 +471,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Contacts"
-        ],
+        "tags": ["Contacts"],
         "summary": "Create contact",
         "operationId": "createContact",
         "description": "Create a contact with payload",
@@ -532,10 +485,7 @@
             "multipart/form-data": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "name",
-                  "phoneNumber"
-                ],
+                "required": ["name", "phoneNumber"],
                 "properties": {
                   "name": {
                     "description": "Contact name",
@@ -560,11 +510,7 @@
                   "contactType": {
                     "description": "Type of contact",
                     "type": "string",
-                    "enum": [
-                      "home",
-                      "work",
-                      "personal"
-                    ]
+                    "enum": ["home", "work", "personal"]
                   },
                   "photo": {
                     "description": "Contact photo",
@@ -583,11 +529,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -614,9 +556,7 @@
     },
     "/auth/register": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
+        "tags": ["Auth"],
         "summary": "Register user",
         "operationId": "createUser",
         "description": "Register user",
@@ -630,11 +570,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "name",
-                  "email",
-                  "password"
-                ],
+                "required": ["name", "email", "password"],
                 "properties": {
                   "name": {
                     "description": "User name",
@@ -663,11 +599,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -694,9 +626,7 @@
     },
     "/auth/login": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
+        "tags": ["Auth"],
         "summary": "Login user",
         "operationId": "loginUser",
         "description": "Login user",
@@ -706,10 +636,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "email",
-                  "password"
-                ],
+                "required": ["email", "password"],
                 "properties": {
                   "email": {
                     "description": "User email",
@@ -733,11 +660,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -764,9 +687,7 @@
     },
     "/auth/logout": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
+        "tags": ["Auth"],
         "summary": "Logout user",
         "operationId": "logoutUser",
         "description": "Logout user",
@@ -791,9 +712,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status"
-                  ],
+                  "required": ["status"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -818,9 +737,7 @@
     },
     "/auth/refresh": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
+        "tags": ["Auth"],
         "summary": "refresh user",
         "operationId": "refreshSession",
         "description": "Refresh session",
@@ -874,11 +791,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "status",
-                    "message",
-                    "data"
-                  ],
+                  "required": ["status", "message", "data"],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -914,11 +827,7 @@
     "schemas": {
       "contacts": {
         "type": "object",
-        "required": [
-          "_id",
-          "name",
-          "phoneNumber"
-        ],
+        "required": ["_id", "name", "phoneNumber"],
         "properties": {
           "_id": {
             "description": "Contact  id",
@@ -948,11 +857,7 @@
           "contactType": {
             "description": "What type of contact ",
             "type": "string",
-            "enum": [
-              "home",
-              "work",
-              "personal"
-            ]
+            "enum": ["home", "work", "personal"]
           },
           "userId": {
             "description": "User id",
@@ -968,9 +873,7 @@
       },
       "updateContact": {
         "type": "object",
-        "required": [
-          "_id"
-        ],
+        "required": ["_id"],
         "properties": {
           "_id": {
             "description": "Student's id",
@@ -1000,11 +903,7 @@
           "contactType": {
             "description": "What type of contact ",
             "type": "string",
-            "enum": [
-              "home",
-              "work",
-              "personal"
-            ]
+            "enum": ["home", "work", "personal"]
           },
           "userId": {
             "description": "User id",
@@ -1020,11 +919,7 @@
       },
       "auth": {
         "type": "object",
-        "required": [
-          "name",
-          "email",
-          "password"
-        ],
+        "required": ["name", "email", "password"],
         "properties": {
           "name": {
             "description": "Name for registration",
@@ -1083,11 +978,7 @@
           "application/json": {
             "schema": {
               "type": "object",
-              "required": [
-                "status",
-                "message",
-                "data"
-              ],
+              "required": ["status", "message", "data"],
               "properties": {
                 "status": {
                   "type": "integer",
@@ -1099,9 +990,7 @@
                 },
                 "data": {
                   "type": "object",
-                  "required": [
-                    "message"
-                  ],
+                  "required": ["message"],
                   "properties": {
                     "message": {
                       "type": "string",
@@ -1120,11 +1009,7 @@
           "application/json": {
             "schema": {
               "type": "object",
-              "required": [
-                "status",
-                "message",
-                "data"
-              ],
+              "required": ["status", "message", "data"],
               "properties": {
                 "status": {
                   "type": "integer",
@@ -1136,9 +1021,7 @@
                 },
                 "data": {
                   "type": "object",
-                  "required": [
-                    "message"
-                  ],
+                  "required": ["message"],
                   "properties": {
                     "message": {
                       "type": "string",
@@ -1157,11 +1040,7 @@
           "application/json": {
             "schema": {
               "type": "object",
-              "required": [
-                "status",
-                "message",
-                "data"
-              ],
+              "required": ["status", "message", "data"],
               "properties": {
                 "status": {
                   "type": "integer",
@@ -1173,9 +1052,7 @@
                 },
                 "data": {
                   "type": "object",
-                  "required": [
-                    "message"
-                  ],
+                  "required": ["message"],
                   "properties": {
                     "message": {
                       "type": "string",
